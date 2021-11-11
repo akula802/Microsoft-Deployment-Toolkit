@@ -40,7 +40,7 @@ foreach ($index in $indexes)
 
         Write-Host Making sure IIT folders are present...
         # Make sure the your custom folders are present
-        if (!(Test-Path $mountDir\ProgramData\IIT))
+        if (!(Test-Path $mountDir\ProgramData\MyOrg))
             {
                 mkdir $mountDir\ProgramData\MyOrg | Out-Null
                 mkdir $mountDir\ProgramData\MyOrg\Apps | Out-Null
