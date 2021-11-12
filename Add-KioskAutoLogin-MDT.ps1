@@ -212,7 +212,7 @@ if (!($Error))
     }
 else
     {
-        #$Error | Out-File -FilePath C:\ProgramData\RedDotIT\kioskSetupError.txt -Encoding UTF8
+        #$Error | Out-File -FilePath C:\ProgramData\kioskSetupError.txt -Encoding UTF8
         $Error | Out-File -FilePath $log -Append
         "`r`n$separator`r`n" | Out-File -FilePath $log -Append
         exit
