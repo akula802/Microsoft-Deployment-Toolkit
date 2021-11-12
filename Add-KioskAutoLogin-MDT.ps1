@@ -206,13 +206,15 @@ if (!($Error))
         Write-Host All good. Restarting...
         #pause
         #Unregister-ScheduledTask -TaskName "EnableKioskAdmin"
+        # The task disable step also runs in the .bat but is unreliable, so it's here, too
         schTasks /change /disable /TN "EnableKioskAdmin"
+        # Delete the .ps1 to hopefully prevent repeated reboots if the task disabling fails (which it does)
         Remove-Item -Path "C:\ProgramData\Scripts\Enable-KioskAutoLogon.ps1" -Force
         Restart-Computer -Force
     }
 else
     {
-        #$Error | Out-File -FilePath C:\ProgramData\kioskSetupError.txt -Encoding UTF8
+        #$Error | Out-File -FilePath C:\ProgramData\Scripts\kioskSetupError.txt -Encoding UTF8
         $Error | Out-File -FilePath $log -Append
         "`r`n$separator`r`n" | Out-File -FilePath $log -Append
         exit
