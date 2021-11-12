@@ -206,6 +206,7 @@ if (!($Error))
         Write-Host All good. Restarting...
         #pause
         #Unregister-ScheduledTask -TaskName "EnableKioskAdmin"
+        schTasks /change /disable /TN "EnableKioskAdmin"
         Restart-Computer -Force
     }
 else
