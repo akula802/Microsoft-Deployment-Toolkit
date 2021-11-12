@@ -207,6 +207,7 @@ if (!($Error))
         #pause
         #Unregister-ScheduledTask -TaskName "EnableKioskAdmin"
         schTasks /change /disable /TN "EnableKioskAdmin"
+        Remove-Item -Path "C:\ProgramData\Scripts\Enable-KioskAutoLogon.ps1" -Force
         Restart-Computer -Force
     }
 else
