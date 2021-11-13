@@ -224,6 +224,7 @@ else
 
 
 
+# Define the batch script to be written to disk
 $BATscript = @'
 C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "C:\ProgramData\Scripts\Enable-KioskAutoLogon.ps1"  1>C:\ProgramData\Scripts\enable-kiosk-task.log 2>&1
 schTasks /change /disable /TN "EnableKioskAdmin"
