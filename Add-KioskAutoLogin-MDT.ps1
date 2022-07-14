@@ -6,9 +6,9 @@
 #    b). Even waiting for the 'wscript' process to finish (deployment is 100% done) before setting the autologon reg keys is not enough
 #    c). After task sequence finishes, unable to connect to deployment share to copy script to local due to Public net profile, so need to write it locally
 #    d). I had issues running the .ps1 via task, so instead it runs a .bat that calls the .ps1
-#    e). The Kiosk user account will be changed later via RMM, so the plain-text here is fine, I don't want to hear it
+#    e). The Kiosk user account password will be changed later via RMM, so the plain-text here is fine, I don't want to hear it
 #
-# There are probably other/better ways to accomplish all of this, but it's after 11:00 PM so tell it to yo momma
+# There are probably better ways to accomplish all of this, but it's after 11:00 PM so tell it to yo momma
 #
 
 
