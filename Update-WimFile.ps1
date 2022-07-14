@@ -38,7 +38,7 @@ foreach ($index in $indexes)
         #Copy and paste this line below, updating for each .msu file (I had trouble looping this)
         Start-Process "$dismPath\dism.exe" -ArgumentList '/Add-Package /Image:"$mountDir" /Packagepath:"$updatesFolder\kb5004945.msu"' -Wait -NoNewWindow | Out-Null
 
-        Write-Host Making sure IIT folders are present...
+        Write-Host Making sure MyOrg folders are present...
         # Make sure the your custom folders are present
         if (!(Test-Path $mountDir\ProgramData\MyOrg))
             {
